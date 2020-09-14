@@ -25,8 +25,15 @@ const fetchArticlesFailure = (error) => {
 
 export const updateNewsCurrentIndex = (index) => {
     return{
-        type: myTypes.UPDATE_NEWS_CURRENT_INDE,
+        type: myTypes.UPDATE_NEWS_CURRENT_INDEX,
         payload: index
+    }
+}
+
+export const updateNewsArticles = (catagory) => {
+    return{
+        type: myTypes.UPDATA_NEWS_ARTICLES,
+        payload: catagory
     }
 }
 

@@ -4,7 +4,7 @@ import Articles from './components/Articles';
 import News from './components/News'
 import Header from './components/Header'
 import {Provider} from 'react-redux'
-import store from './store'
+import store from './redux/store'
 
 function App() {
   return (

@@ -1,12 +1,11 @@
 import React,{useEffect} from 'react'
 import fetchArticles from '../redux/actions'
 import {connect} from 'react-redux'
-import news_catagories from '../news_catagories'
 import Card from './Card'
 
 function Articles({data , fetchAllArticles}) {
     useEffect(() => {
-        fetchAllArticles(news_catagories.BITCOIN)},[])
+        fetchAllArticles(data.news_catagory)},[data.news_catagory])
     return (
         data.loading ? 
         (<h2>Loading...</h2>) : 
@@ -16,7 +15,7 @@ function Articles({data , fetchAllArticles}) {
 
 const mapStateToProps = state => {
     return{
-        data: state
+        data: state,
     }
 }
 
